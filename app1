@@ -15,8 +15,7 @@ while True:
         n = input("Digite seu nome: ")
         e = input('Digite seu email: ')
 
-        # coloquei o while aqui pois era so para saber se as senhas
-        # sao iguais( depois que vc ler isso, vc pode apagar esse comentario.)
+ 
         while True:
 
             se = input("Digite sua Senha: ")
