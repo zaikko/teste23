@@ -21,9 +21,11 @@ while True:
             print("A sua senha nao esta igual")
             break
 
-
     print(f'Seu nome é {n}\n seu email é {e} esta correto?')
     d2 = int(input('Esta correto ? digite 1 para confirmar 2 para cancelar'))
+
+
+while d3 !=0:
     d3 = int(input("Cadastro feito, Escolha qual vc quer usar\n 1 Ver desconto\n 2 Ver se foi aprovado\n 3 Ver tabuada\n 4 Para converter dolar em real\n 5 Calculadora"))
 
 
@@ -64,6 +66,7 @@ while True:
         su = calc - calc2
 
         print('A soma é {} a divisão é {:.3} a multiplicação é {} a subtração é {}'.format(soma, d, v, su))
+
 
 
 
