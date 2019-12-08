@@ -49,7 +49,7 @@ while True:
      elif d3 ==2:
             no1 = float(input('Digite sua primeira nota '))
             no2 = float(input('Digite sua segunda nota'))
-            m = no1 + no2 / 2
+            m = (no1 + no2) / 2
             if m >= 6:
                 print('=' * 23)
 
