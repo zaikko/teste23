@@ -71,8 +71,12 @@ def lista():
             if d3 == 1:
                 print(lista)
                 y = input('Qual deles vc quer remover?: ')
-                lista.remove(y)
-                print(lista)
+                if y in lista:
+                    print('o nome foi removido')
+                    lista.remove(y)
+                    print(lista)
+                else:
+                    print("Esse nome n existe")
             elif d3 == 2:
                 nome = input('Digite um novo nome: ')
                 lista.append(nome)
