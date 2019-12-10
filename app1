@@ -2,6 +2,85 @@ decisao = 0
 d2 = 0
 d3 = 0
 
+
+def verdesconto():
+
+        num = float(input("Quanto vale o produto ?  R$  "))
+        num2 = float(input("Quantos de desconto ? "))
+        d = num * num2 / 100
+        print("=" * 23)
+        print('o valor do desconto fica {}'.format(d))
+        m = num - d
+        print("o valor do protudo fica {}".format(m))
+        print('=' * 23)
+
+
+def versefoiaprovado():
+    no1 = float(input('Digite sua primeira nota '))
+    no2 = float(input('Digite sua segunda nota'))
+    m = (no1 + no2) / 2
+    if m >= 6:
+        print('=' * 23)
+
+        print("{} Foi aprovado".format(n))
+
+        print("=" * 23)
+    else:
+        print("=" * 23)
+        print("{} Foi reprovado".format(n))
+        print("=" * 23)
+
+def vertabuada():
+    for i in range(0, 11, ):
+        print("*" * 10)
+
+        for j in range(0, 11):
+            print(f'{i} x {j} = {i * j}')
+    print("*" * 14)
+    print('*' * 15)
+
+def converterdinheiro():
+    mo1 = float(input("Digite o valor em R$ "))
+    con = mo1 / 4.24
+    print('=' * 23)
+    print("Você tem {:.2f} US ".format(con))
+    print('=' * 23)
+
+def calculadora():
+    calc = float(input('Digite o primeiro valor'))
+    calc2 = float(input('Digite o segundo valor '))
+    soma = calc + calc2
+    d = calc / calc2
+    v = calc * calc2
+    su = calc - calc2
+    print('=' * 23)
+    print('A soma é {} a divisão é {:.3} a multiplicação é {} a subtração é {}'.format(soma, d, v, su))
+    print('=' * 23)
+
+
+def lista():
+    while True:
+        print('Crie a sua lista')
+        n1 = input('Digite o primeiro nome da lista: ')
+        n2 = input('Digite o segundo nome da lista: ')
+        n3 = input('Digite o terceiro nome da lista: ')
+        lista = [n1, n2, n3]
+        print(lista)
+        while True:
+            d3 = int(input('Digite 1 para remover um nome da lista 2 para adicionar: '))
+            if d3 == 1:
+                print(lista)
+                y = input('Qual deles vc quer remover?: ')
+                lista.remove(y)
+                print(lista)
+            elif d3 == 2:
+                nome = input('Digite um novo nome: ')
+                lista.append(nome)
+
+                print(lista)
+
+
+
 while True:
     decisao = int(input('Digite 1  para cadastrar 2 para sair: '))
     if decisao == 2:
@@ -29,103 +108,47 @@ while True:
     if d2 == 2:
         break
     while True:
-        d3 = int(input("Cadastro feito, Escolha qual vc quer usar\n 1 Ver desconto\n 2 Ver se foi aprovado\n 3 Ver tabuada\n 4 Para converter dolar em real\n 5 Calculadora\n 6 Fazer uma lista :> "))
+        d3 = int(input("Cadastro feito, Escolha qual vc quer usar\n 1 Ver desconto\n 2 Ver se foi aprovado\n 3  Ver tabuada\n 4 Para converter dolar em real\n 5 Calculadora\n 6 Fazer uma lista :> "))
 
 
         #VER DESCONTO
-        if d3 == 1:
-            num = float(input("Quanto vale o produto ?  R$  "))
-            num2 = float(input("Quantos de desconto ? "))
-            d = num * num2 / 100
-            print("=" * 23)
-            print('o valor do desconto fica {}'.format(d))
-            m = num - d
-            print("o valor do protudo fica {}".format(m))
-            print('=' * 23)
+        if d3 ==1:
+            verdesconto()
 
-        #FIM DO DESCONTO
 
 
         #VER SE FOI APROVADO
         elif d3 == 2:
-            no1 = float(input('Digite sua primeira nota '))
-            no2 = float(input('Digite sua segunda nota'))
-            m = (no1 + no2) / 2
-            if m >= 6:
-                print('=' * 23)
+           versefoiaprovado()
 
-                print("{} Foi aprovado".format(n))
-
-                print("=" * 23)
-            else:
-                print("=" * 23)
-                print("{} Foi reprovado".format(n))
-                print("=" * 23)
-        #FIM
 
 
         #VER TABUADA
         elif d3 == 3:
-            for i in range(0, 11, ):
-                print("*" * 10)
+            vertabuada()
 
-                for j in range(0, 11):
-                    print(f'{i} x {j} = {i * j}')
-            print("*" * 14)
-            print('*' * 15)
-
-        #FIM DA TABUADA
 
 
 
         #REAL EM DOLAR
 
         elif d3 == 4:
-            mo1 = float(input("Digite o valor em R$ "))
-            con = mo1 / 4.24
-            print('=' * 23)
-            print("Você tem {:.2f} US ".format(con))
-            print('=' * 23)
+            converterdinheiro()
 
-        #FIM
 
         #CALCULADORA
 
         elif d3 == 5:
-            calc = float(input('Digite o primeiro valor'))
-            calc2 = float(input('Digite o segundo valor '))
-            soma = calc + calc2
-            d = calc / calc2
-            v = calc * calc2
-            su = calc - calc2
-            print('=' * 23)
-            print('A soma é {} a divisão é {:.3} a multiplicação é {} a subtração é {}'.format(soma, d, v, su))
-            print('=' * 23)
+            calculadora()
 
-         #FIM DA CALCULADORA
+
 
 
 
         # LISTA
         elif d3 ==6:
 
-            while True:
-                print('Crie a sua lista')
-                n1 = input('Digite o primeiro nome da lista: ')
-                n2 = input('Digite o segundo nome da lista: ')
-                n3 = input('Digite o terceiro nome da lista: ')
-                lista = [n1, n2, n3]
-                print(lista)
-                while True:
-                    d3 = int(input('Digite 1 para remover um nome da lista 2 para adicionar: '))
-                    if d3 == 1:
-                        print(lista)
-                        y = input('Qual deles vc quer remover?: ')
-                        lista.remove(y)
-                        print(lista)
-                    elif d3 == 2:
-                        nome = input('Digite um novo nome: ')
-                        lista.append(nome)
+           lista()
 
-                        print(lista)
-        #FIM DA LISTA
+
+
