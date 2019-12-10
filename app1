@@ -107,3 +107,25 @@ while True:
 
 
         # LISTA
+        elif d3 ==6:
+
+            while True:
+                print('Crie a sua lista')
+                n1 = input('Digite o primeiro nome da lista: ')
+                n2 = input('Digite o segundo nome da lista: ')
+                n3 = input('Digite o terceiro nome da lista: ')
+                lista = [n1, n2, n3]
+                print(lista)
+                while True:
+                    d3 = int(input('Digite 1 para remover um nome da lista 2 para adicionar: '))
+                    if d3 == 1:
+                        print(lista)
+                        y = input('Qual deles vc quer remover?: ')
+                        lista.remove(y)
+                        print(lista)
+                    elif d3 == 2:
+                        nome = input('Digite um novo nome: ')
+                        lista.append(nome)
+
+                        print(lista)
+        #FIM DA LISTA
