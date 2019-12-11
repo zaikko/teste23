@@ -59,29 +59,31 @@ def calculadora():
 
 
 def lista():
+    print('Crie a sua lista')
+    n1 = input('Digite o primeiro nome da lista: ')
+    n2 = input('Digite o segundo nome da lista: ')
+    n3 = input('Digite o terceiro nome da lista: ')
+    lista = [n1, n2, n3]
+    print(lista)
     while True:
-        print('Crie a sua lista')
-        n1 = input('Digite o primeiro nome da lista: ')
-        n2 = input('Digite o segundo nome da lista: ')
-        n3 = input('Digite o terceiro nome da lista: ')
-        lista = [n1, n2, n3]
-        print(lista)
-        while True:
-            d3 = int(input('Digite 1 para remover um nome da lista 2 para adicionar: '))
-            if d3 == 1:
-                print(lista)
-                y = input('Qual deles vc quer remover?: ')
-                if y in lista:
-                    print('o nome foi removido')
-                    lista.remove(y)
-                    print(lista)
-                else:
-                    print("Esse nome n existe")
-            elif d3 == 2:
-                nome = input('Digite um novo nome: ')
-                lista.append(nome)
+        d3 = int(input('Digite 1 para remover um nome da lista, 2 para adicionar ou 3 para sair deste menu: '))
 
+        if d3 == 1:
+            print(lista)
+            y = input('Qual deles vc quer remover?: ')
+            if y in lista:
+                print('o nome foi removido')
+                lista.remove(y)
                 print(lista)
+            else:
+                print("Esse nome nao existe")
+        elif d3 == 2:
+            nome = input('Digite um novo nome: ')
+            lista.append(nome)
+
+            print(lista)
+        elif d3 == 3:
+            break
 
 
 
@@ -112,7 +114,7 @@ while True:
     if d2 == 2:
         break
     while True:
-        d3 = int(input("Cadastro feito, Escolha qual vc quer usar\n 1 Ver desconto\n 2 Ver se foi aprovado\n 3  Ver tabuada\n 4 Para converter dolar em real\n 5 Calculadora\n 6 Fazer uma lista :> "))
+        d3 = int(input("Cadastro feito, Escolha qual vc quer usar\n 1 Ver desconto\n 2 Ver se foi aprovado\n 3  Ver tabuada\n 4 Para converter dolar em real\n 5 Calculadora\n 6 Fazer uma lista \n 7 para sair do menu\n>: "))
 
 
         #VER DESCONTO
@@ -154,5 +156,7 @@ while True:
 
            lista()
 
+        # SAIR DO MENU
 
-
+        elif d3 == 7:
+            break
